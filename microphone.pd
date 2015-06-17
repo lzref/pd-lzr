@@ -1,0 +1,5 @@
+#N canvas 327 130 688 467 10;
+#X obj 109 130 outlet~;
+#X obj 107 56 adc~ 1;
+#X connect 1 0 0 0;
+#X coords 0 467 1 466 85 50 0;

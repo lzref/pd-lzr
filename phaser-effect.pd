@@ -1,0 +1,43 @@
+#N canvas 187 210 1000 350 10;
+#X obj 711 139 knob 32 32 0 10 0 1 \$0-speed empty empty 0 -8 0 8 -262144
+-1 -1 0 1;
+#X text 709 119 Speed;
+#X obj 772 140 knob 32 32 0 3 0 1 \$0-depth empty empty 0 -8 0 8 -262144
+-1 -1 0 1;
+#X text 831 121 Feedback;
+#X obj 836 139 knob 32 32 -0.9 0.9 0 1 \$0-feedback empty empty 0 -8
+0 8 -262144 -1 -1 1550 1;
+#X text 772 103 Phaser;
+#X text 771 120 Depth;
+#X obj 704 177 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 0 256;
+#X obj 767 177 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 0 256;
+#X obj 832 177 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 0 256;
+#X obj 44 50 inlet~;
+#X obj 38 242 outlet~;
+#X obj 395 47 inlet~;
+#X obj 375 240 outlet~;
+#X obj 433 99 r \$0-speed;
+#X obj 92 76 r \$0-speed;
+#X obj 497 71 r \$0-depth;
+#X obj 581 103 r \$0-feedback;
+#X obj 166 54 r \$0-depth;
+#X obj 210 84 r \$0-feedback;
+#X obj 29 127 lazarchik/phaser-effect-single-channel;
+#X obj 363 149 lazarchik/phaser-effect-single-channel;
+#X connect 0 0 7 0;
+#X connect 2 0 8 0;
+#X connect 4 0 9 0;
+#X connect 10 0 20 0;
+#X connect 12 0 21 0;
+#X connect 14 0 21 1;
+#X connect 15 0 20 1;
+#X connect 16 0 21 2;
+#X connect 17 0 21 3;
+#X connect 18 0 20 2;
+#X connect 19 0 20 3;
+#X connect 20 0 11 0;
+#X connect 21 0 13 0;
+#X coords 0 -1 1 1 190 100 2 700 100;
