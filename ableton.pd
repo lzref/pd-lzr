@@ -1,5 +1,5 @@
 #N canvas 372 108 1194 740 10;
-#X obj 119 332 lazarchik/phaser-effect;
+#X obj 119 332 lzr/phaser-effect;
 #X obj 349 167 simple-fuzz-effect;
 #N canvas 51 34 795 726 persist-presets 0;
 #X msg 169 184 save;

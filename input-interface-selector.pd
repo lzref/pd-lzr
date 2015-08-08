@@ -1,5 +1,6 @@
-#N canvas 201 22 817 678 10;
-#X obj 6 28 popup 124 25 #ffffff  JACK;
+#N canvas 287 132 817 678 10;
+#X obj 6 28 popup 124 25 #ffffff  (0)Built-in Microph (0)Soundflower (2ch)
+(0)Soundflower (64ch) (0)SuperFlower;
 #X obj 289 243 route in;
 #X obj 287 218 route device;
 #X msg 415 96 listdevices;
@@ -43,4 +44,4 @@
 #X connect 18 0 17 0;
 #X connect 19 0 2 0;
 #X connect 20 0 12 0;
-#X coords 0 -1 1 1 150 60 2 0 0;
+#X coords 0 678 1 677 150 60 2 0 0;

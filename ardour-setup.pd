@@ -1,12 +1,12 @@
 #N canvas 555 92 772 600 10;
 #X obj 35 24 adc~ 1;
-#X obj 29 395 lazarchik/volume-control;
+#X obj 29 395 lzr/volume-control;
 #X obj 29 556 dac~ 1;
-#X obj 345 277 lazarchik/volume-control;
+#X obj 345 277 lzr/volume-control;
 #X obj 343 24 adc~ 2;
 #X obj 346 436 dac~ 2;
-#X obj 345 100 lazarchik/phaser-effect;
-#X obj 26 94 lazarchik/simple-fuzz-effect;
+#X obj 345 100 lzr/phaser-effect;
+#X obj 26 94 lzr/simple-fuzz-effect;
 #X connect 0 0 7 0;
 #X connect 1 0 2 0;
 #X connect 3 0 5 0;
