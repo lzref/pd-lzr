@@ -1,6 +1,6 @@
-#N canvas 287 132 817 678 10;
-#X obj 6 28 popup 124 25 #ffffff  (0)Built-in Microph (0)Soundflower (2ch)
-(0)Soundflower (64ch) (0)SuperFlower;
+#N canvas 287 132 858 661 10;
+#X obj 6 28 popup 124 25 #ffffff  Built-in Microph Soundflower (2ch)
+Soundflower (64ch) SuperFlower;
 #X obj 289 243 route in;
 #X obj 287 218 route device;
 #X msg 415 96 listdevices;
@@ -18,10 +18,10 @@
 #X obj 569 327 route devices;
 #X obj 540 59 t b b;
 #X obj 536 34 loadbang;
-#X obj 537 11 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
--1;
 #X obj 249 191 mediasettings/audiosettings;
 #X obj 579 227 mediasettings/audiosettings;
+#X obj 511 34 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
 #X connect 1 0 4 0;
 #X connect 2 0 1 0;
 #X connect 3 0 10 0;
@@ -30,10 +30,10 @@
 #X connect 6 0 0 0;
 #X connect 7 0 0 0;
 #X connect 9 0 0 0;
-#X connect 10 0 19 0;
+#X connect 10 0 18 0;
 #X connect 10 1 7 0;
 #X connect 10 2 9 0;
-#X connect 11 0 20 0;
+#X connect 11 0 19 0;
 #X connect 12 0 13 0;
 #X connect 13 0 15 0;
 #X connect 14 0 0 0;
@@ -41,7 +41,7 @@
 #X connect 16 0 11 0;
 #X connect 16 1 3 0;
 #X connect 17 0 16 0;
-#X connect 18 0 17 0;
-#X connect 19 0 2 0;
-#X connect 20 0 12 0;
+#X connect 18 0 2 0;
+#X connect 19 0 12 0;
+#X connect 20 0 16 0;
 #X coords 0 678 1 677 150 60 2 0 0;
