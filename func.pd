@@ -1,0 +1,52 @@
+#N canvas 433 214 987 687 10;
+#X obj 225 268 inlet;
+#X obj 616 267 inlet;
+#X obj 225 607 outlet;
+#X obj 616 573 outlet;
+#X text 182 243 arguments from the caller object;
+#X text 669 255 results from the callee object;
+#X text 564 602 arguments to the callee object;
+#X text 199 635 results to the caller object;
+#X obj 648 435 spigot 0;
+#X msg 666 405 1;
+#X msg 701 405 0;
+#X text 375 325 open the spigot;
+#X text 675 340 incoming messages;
+#X text 674 357 close the spigot;
+#X text 674 374 after they pass;
+#X text 564 638 (see second inlet);
+#X text 563 620 callee object MUST output something;
+#X obj 225 505 list;
+#X text 21 441 sending the results out;
+#X text 21 456 only after spigot got closed;
+#X text 266 511 not sure how to support;
+#X text 266 524 arbitrary data types;
+#X text 60 26 == "Function call" abstraction. ==;
+#X text 61 49 When designing PD patches \, it's a good practice to
+separate;
+#X text 48 68 relatively independent functionality into subpatches
+and;
+#X text 48 88 abstractions. Often one subpatch/abstraction ("caller")
+;
+#X text 49 125 subpatch/abstraction ("callee") and receive "results"
+as a;
+#X text 50 144 response. When no call is made \, any data coming from
+the;
+#X text 50 161 callee should be ignored (this is achieved by using
+a;
+#X text 50 177 spigot);
+#X text 48 106 needs to send certain data ("arguments") to another
+;
+#X obj 225 310 t b a b;
+#X obj 616 346 t b a;
+#X connect 0 0 31 0;
+#X connect 1 0 32 0;
+#X connect 8 0 17 1;
+#X connect 9 0 8 1;
+#X connect 10 0 8 1;
+#X connect 17 0 2 0;
+#X connect 31 0 17 0;
+#X connect 31 1 3 0;
+#X connect 31 2 9 0;
+#X connect 32 0 10 0;
+#X connect 32 1 8 0;
