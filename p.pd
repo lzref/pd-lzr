@@ -1,0 +1,12 @@
+#N canvas 238 122 740 485 10;
+#X obj 70 101 inlet;
+#X obj 70 143 t a a;
+#X obj 70 231 outlet;
+#X text 523 37 Prints results;
+#X text 524 55 before passing through;
+#X text 524 74 Much more convenient;
+#X text 522 94 than just using [print];
+#X obj 102 183 print \$1;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 1 1 7 0;
