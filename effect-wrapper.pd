@@ -22,7 +22,7 @@
 #X obj 35 152 t b b b b;
 #X obj 388 747 iemguts/canvasselect 0;
 #X floatatom 388 770 5 0 0 0 - - -, f 5;
-#X obj 388 704 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 388 704 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 388 724 metro 500;
 #X text 591 720 inlet/outlet ID's are hardcoded =>;
@@ -55,8 +55,8 @@
 #X msg 517 646 effect-params \$3 \$4 \$1;
 #X obj 295 438 route effect;
 #X obj 295 514 route canvas-index save-effect suicide;
-#X msg 1060 456 57;
 #X obj 321 553 iemguts/canvasdelete 1;
+#X msg 1060 456 56;
 #X connect 0 0 39 0;
 #X connect 4 0 35 0;
 #X connect 9 0 10 0;
@@ -80,7 +80,7 @@
 #X connect 28 1 15 0;
 #X connect 28 2 17 0;
 #X connect 28 3 18 0;
-#X connect 28 4 54 0;
+#X connect 28 4 55 0;
 #X connect 29 0 19 0;
 #X connect 33 0 38 0;
 #X connect 34 0 52 0;
@@ -105,6 +105,6 @@
 #X connect 52 0 41 0;
 #X connect 53 0 33 0;
 #X connect 53 1 50 0;
-#X connect 53 2 55 0;
-#X connect 54 0 27 4;
+#X connect 53 2 54 0;
+#X connect 55 0 27 4;
 #X coords 0 -1 1 1 190 190 2 700 50;
