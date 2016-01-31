@@ -1,4 +1,4 @@
-#N canvas 272 139 1287 541 10;
+#N canvas 338 54 1287 541 10;
 #X obj 485 180 *~ 40;
 #X obj 485 224 clip~ -0.5 0.5;
 #X obj 485 77 inlet~;
@@ -37,7 +37,6 @@
 #X obj 60 45 t a;
 #X obj 60 419 t a;
 #X obj 942 332 t a;
-#X obj 922 88 p fuzz.incoming;
 #X connect 0 0 1 0;
 #X connect 0 0 12 0;
 #X connect 1 0 3 0;
@@ -52,7 +51,7 @@
 #X connect 13 0 25 0;
 #X connect 15 0 16 0;
 #X connect 16 0 27 0;
-#X connect 17 0 36 0;
+#X connect 17 0 32 0;
 #X connect 19 0 9 0;
 #X connect 20 0 11 1;
 #X connect 21 0 14 1;
@@ -73,5 +72,4 @@
 #X connect 33 0 19 0;
 #X connect 34 0 33 0;
 #X connect 35 0 34 0;
-#X connect 36 0 32 0;
 #X coords 0 -1 1 1 190 190 2 100 100;
