@@ -1,4 +1,4 @@
-#N canvas 283 231 733 479 10;
+#N canvas 283 231 1058 385 10;
 #X obj 405 124 *~ 40;
 #X obj 406 168 clip~ -0.5 0.5;
 #X obj 400 61 inlet~;
@@ -10,13 +10,15 @@
 #X text 64 7 Fuzz;
 #X obj 39 35 knob 32 32 0 50 0 0 empty empty empty 0 -8 0 8 -262144
 -1 -1 0 1;
-#X floatatom 40 75 5 0 0 0 - - -;
+#X floatatom 40 75 5 0 0 0 - - -, f 5;
 #X obj 79 37 vu 15 120 empty empty -1 -8 0 10 -66577 -262144 1 0;
 #X obj 319 146 env~;
 #X obj 319 168 - 100;
 #X obj 96 37 vu 15 120 empty empty -1 -8 0 10 -66577 -1 1 0;
 #X obj 519 153 env~;
 #X obj 519 175 - 100;
+#X obj 731 64 inlet;
+#X obj 734 232 outlet;
 #X connect 0 0 1 0;
 #X connect 0 0 12 0;
 #X connect 1 0 3 0;

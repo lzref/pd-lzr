@@ -9,6 +9,8 @@
 #X obj 235 126 env~;
 #X obj 235 148 - 100;
 #X text 38 11 Poly-synth;
+#X obj 597 48 inlet;
+#X obj 600 212 outlet;
 #X connect 5 0 1 0;
 #X connect 5 0 3 0;
 #X connect 5 0 7 0;
