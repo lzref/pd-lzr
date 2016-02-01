@@ -799,10 +799,10 @@ dump-all-tracks, f 74;
 #X connect 54 0 47 0;
 #X connect 55 0 48 0;
 #X restore 861 239 pd \$0-persist-fx;
-#X obj 182 118 route set-current-track window-size add-effect new-effect-id
-delete-track-effects canvas-index-response dump-parameters effect-params
-show-panel-guts, f 154;
 #X text 590 152 delete effects;
+#X obj 182 118 route set-current-track window-size add-effect new-effect-id
+delete-track-effects canvas-index-response save-parameters effect-params
+show-panel-guts, f 154;
 #X connect 0 0 1 0;
 #X connect 1 0 3 0;
 #X connect 2 0 4 0;
@@ -830,7 +830,7 @@ show-panel-guts, f 154;
 #X connect 22 0 4 2;
 #X connect 22 0 17 0;
 #X connect 22 0 31 0;
-#X connect 23 0 50 0;
+#X connect 23 0 51 0;
 #X connect 28 0 27 0;
 #X connect 29 0 19 0;
 #X connect 30 0 20 0;
@@ -848,15 +848,15 @@ show-panel-guts, f 154;
 #X connect 48 0 25 0;
 #X connect 49 0 45 0;
 #X connect 49 1 48 0;
-#X connect 50 0 3 0;
-#X connect 50 1 7 1;
-#X connect 50 2 2 0;
-#X connect 50 3 4 4;
-#X connect 50 4 18 0;
-#X connect 50 5 33 0;
-#X connect 50 6 49 0;
-#X connect 50 7 49 2;
-#X connect 50 8 40 0;
+#X connect 51 0 3 0;
+#X connect 51 1 7 1;
+#X connect 51 2 2 0;
+#X connect 51 3 4 4;
+#X connect 51 4 18 0;
+#X connect 51 5 33 0;
+#X connect 51 6 49 0;
+#X connect 51 7 49 2;
+#X connect 51 8 40 0;
 #X coords 0 916 1 915 100 100 0;
 #X restore 835 51 pd \$0-effects-panel-behavior;
 #X obj 835 76 s \$1-global-events;
