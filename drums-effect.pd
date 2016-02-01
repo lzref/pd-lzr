@@ -3,46 +3,46 @@
 #X obj 323 620 outlet~;
 #X obj 359 10 inlet~;
 #X obj 500 643 outlet~;
-#X obj 75 43 vu 15 120 empty empty -1 -8 0 10 -66577 -1 1 0;
-#X obj 235 126 env~;
-#X obj 235 148 - 100;
-#X obj 400 232 mpx16;
+#X obj 187 138 vu 15 120 empty empty -1 -8 0 10 -66577 -1 1 0;
+#X obj 397 176 env~;
+#X obj 397 198 - 100;
+#X obj 554 209 mpx16;
 #X obj 552 421 kick-drum;
 #X obj 677 412 acreil-snare1-drum;
 #X obj 815 413 acreil-snare2-drum;
-#X obj 533 293 select 2 3 1 4 5;
-#X floatatom 400 273 5 0 0 0 - - -, f 5;
-#X obj 954 366 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 391 99 select 2 3 1 4 5;
+#X floatatom 554 250 5 0 0 0 - - -, f 5;
+#X obj 254 264 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 815 379 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 214 266 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 550 401 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 138 266 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 678 388 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 175 266 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 367 407 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 118 266 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 400 205 notein;
-#X obj 379 140 midiparse;
-#X obj 380 42 midiin;
-#X obj 379 166 unpack f f;
-#X obj 379 65 midi-recorder midi/drums.mid;
+#X obj 554 182 notein;
+#X obj 533 117 midiparse;
+#X obj 534 19 midiin;
+#X obj 533 143 unpack f f;
+#X obj 533 42 midi-recorder midi/drums.mid;
 #X obj 367 430 creb/ti_hihat;
 #X obj 955 393 creb/ti_snare;
 #X obj 361 491 +~, f 2;
 #X obj 380 523 +~;
 #X obj 418 545 +~;
 #X obj 462 591 +~;
-#X obj 57 43 vu 15 120 empty empty -1 -8 0 4 -33289 -33289 1 0;
-#X obj 197 191 env~;
-#X obj 197 213 - 100;
+#X obj 169 138 vu 15 120 empty empty -1 -8 0 4 -33289 -33289 1 0;
+#X obj 359 241 env~;
+#X obj 359 263 - 100;
 #X obj 538 531 +~, f 2;
 #X obj 557 563 +~;
 #X obj 595 585 +~;
 #X obj 638 609 +~;
-#X obj 759 61 inlet;
-#X obj 759 206 outlet;
-#X text 38 11 Drums;
+#X obj 913 38 inlet;
+#X obj 913 183 outlet;
+#X text 150 106 Drums;
 #X connect 5 0 6 0;
 #X connect 6 0 4 0;
 #X connect 7 0 11 0;
@@ -90,4 +90,4 @@
 #X connect 34 0 35 0;
 #X connect 35 0 3 0;
 #X connect 35 0 5 0;
-#X coords 0 -1 1 1 190 190 2 0 0;
+#X coords 0 -1 1 1 190 190 2 100 100;
