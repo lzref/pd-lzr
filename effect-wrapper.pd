@@ -31,7 +31,7 @@
 #X text 1030 474 of dynamically created;
 #X text 1032 495 effect box;
 #X obj 960 414 prepend set;
-#X msg 960 454 57;
+#X msg 960 454 58;
 #N canvas 307 129 511 206 \$0-next-object-id 0;
 #X obj 27 31 inlet;
 #X obj 157 138 outlet;
@@ -70,10 +70,12 @@ connect 1 0 \$5 1 \, connect \$5 0 2 0 \, connect \$5 1 3 0 \, connect
 #X obj 35 751 s \$2-global-events;
 #X obj 35 82 lzr/once;
 #X obj 35 152 t b b;
-#X obj 35 54 p loadbang-received.by.\$0.\$1.\$2.\$3.\$4;
+#X obj 888 41 inlet;
+#X obj 887 332 outlet;
 #X connect 5 0 37 0;
+#X connect 5 0 57 0;
 #X connect 6 0 14 0;
-#X connect 8 0 56 0;
+#X connect 8 0 54 0;
 #X connect 9 0 10 0;
 #X connect 11 0 12 0;
 #X connect 12 0 9 0;
@@ -112,5 +114,5 @@ connect 1 0 \$5 1 \, connect \$5 0 2 0 \, connect \$5 1 3 0 \, connect
 #X connect 54 0 55 0;
 #X connect 55 0 6 0;
 #X connect 55 1 33 0;
-#X connect 56 0 54 0;
+#X connect 56 0 4 0;
 #X coords 0 -1 1 1 190 190 2 700 100;

@@ -12,8 +12,8 @@
 #X obj 537 733 outlet;
 #X obj 100 100 cnv 15 172 35 empty empty empty 5 8 0 10 -204786 -1345
 0;
-#X symbolatom 139 103 21 0 0 0 - #0-track-name.gui.set #0-track-name.gui
-, f 21;
+#X symbolatom 139 103 18 0 0 0 - #0-track-name.gui.set #0-track-name.gui
+, f 18;
 #X text 64 150 Arguments:;
 #X text 67 167 \$1: \$0 of a top level parent patch that contains audio
 throws;
