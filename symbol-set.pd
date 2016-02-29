@@ -28,6 +28,7 @@
 #X obj 763 491 t a;
 #X obj 651 535 symbol;
 #X obj 570 225 t b b b a;
+#X obj 87 613 list;
 #X connect 0 0 7 0;
 #X connect 0 0 16 0;
 #X connect 0 0 20 1;
@@ -52,7 +53,7 @@
 #X connect 12 0 14 0;
 #X connect 12 1 18 0;
 #X connect 13 0 12 0;
-#X connect 14 0 15 0;
+#X connect 14 0 29 0;
 #X connect 16 0 17 0;
 #X connect 17 0 9 1;
 #X connect 17 0 12 1;
@@ -69,3 +70,4 @@
 #X connect 28 1 0 1;
 #X connect 28 2 20 0;
 #X connect 28 3 26 0;
+#X connect 29 0 15 0;
