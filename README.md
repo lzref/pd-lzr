@@ -4,4 +4,4 @@ Connect audio and MIDI devices, add various effects an instruments, record audio
 
 [https://github.com/lazarchik/pd-lzr/](https://github.com/lazarchik/pd-lzr/)
 
-[![pd-lzr screenshot](http://i.imgur.com/4VIBNWXh.png)](http://imgur.com/4VIBNWX)
+[![pd-lzr screenshot](http://i.imgur.com/4VIBNWXh.png)](http://i.imgur.com/4VIBNWX.png)
