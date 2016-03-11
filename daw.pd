@@ -1,61 +1,61 @@
-#N struct 1229-template float w float h float w2 float h2 float border-color
+#N struct 3146-template float w float h float w2 float h2 float border-color
 float background-color float behind-color float shadow-color float
 levitation;
-#N struct 1235-template float w float h float w2 float h2 float border-color
+#N struct 3127-template float w float h float w2 float h2 float border-color
 float background-color float behind-color float shadow-color float
 levitation;
-#N struct 1239-template float w float h float w2 float h2 float border-color
+#N struct 3149-template float w float h float w2 float h2 float border-color
 float background-color float behind-color float shadow-color float
 levitation;
-#N struct 1254-template float w float h float w2 float h2 float border-color
+#N struct 2722-template float w float h float w2 float h2 float border-color
 float background-color float behind-color float shadow-color float
 levitation;
-#N struct 1257-template float w float h float w2 float h2 float border-color
+#N struct 2725-template float w float h float w2 float h2 float border-color
 float background-color float behind-color float shadow-color float
 levitation;
-#N struct 1260-template float w float h float w2 float h2 float border-color
+#N struct 2728-template float w float h float w2 float h2 float border-color
 float background-color float behind-color float shadow-color float
 levitation;
-#N struct 1263-template float w float h float w2 float h2 float border-color
+#N struct 2731-template float w float h float w2 float h2 float border-color
 float background-color float behind-color float shadow-color float
 levitation;
-#N struct 1266-template float w float h float w2 float h2 float border-color
+#N struct 2734-template float w float h float w2 float h2 float border-color
 float background-color float behind-color float shadow-color float
 levitation;
-#N struct 1269-template float w float h float w2 float h2 float border-color
+#N struct 2737-template float w float h float w2 float h2 float border-color
 float background-color float behind-color float shadow-color float
 levitation;
-#N struct 1272-template float w float h float w2 float h2 float border-color
+#N struct 2740-template float w float h float w2 float h2 float border-color
 float background-color float behind-color float shadow-color float
 levitation;
-#N struct 1275-template float w float h float w2 float h2 float border-color
+#N struct 2743-template float w float h float w2 float h2 float border-color
 float background-color float behind-color float shadow-color float
 levitation;
-#N struct 1319-template float w float h float w2 float h2 float border-color
+#N struct 2787-template float w float h float w2 float h2 float border-color
 float background-color float behind-color float shadow-color float
 levitation float text-color symbol label float boxpos float symbolpos
 ;
-#N struct 1323-template float w float h float w2 float h2 float border-color
+#N struct 2791-template float w float h float w2 float h2 float border-color
 float background-color float behind-color float shadow-color float
 levitation float text-color symbol label float boxpos float symbolpos
 ;
-#N struct 1327-template float w float h float w2 float h2 float border-color
+#N struct 2795-template float w float h float w2 float h2 float border-color
 float background-color float behind-color float shadow-color float
 levitation float text-color symbol label float boxpos float symbolpos
 ;
-#N struct 1331-template float w float h float w2 float h2 float border-color
+#N struct 2799-template float w float h float w2 float h2 float border-color
 float background-color float behind-color float shadow-color float
 levitation float text-color symbol label float boxpos float symbolpos
 ;
-#N struct 1335-template float w float h float w2 float h2 float border-color
+#N struct 2803-template float w float h float w2 float h2 float border-color
 float background-color float behind-color float shadow-color float
 levitation float text-color symbol label float boxpos float symbolpos
 ;
-#N struct 1339-template float w float h float w2 float h2 float border-color
+#N struct 2807-template float w float h float w2 float h2 float border-color
 float background-color float behind-color float shadow-color float
 levitation float text-color symbol label float boxpos float symbolpos
 ;
-#N struct 1343-template float w float h float w2 float h2 float border-color
+#N struct 2811-template float w float h float w2 float h2 float border-color
 float background-color float behind-color float shadow-color float
 levitation float text-color symbol label float boxpos float symbolpos
 ;
@@ -943,14 +943,14 @@ Empty 20 12 0 14 -233017 -66577 0;
 #X obj 264 62 inlet;
 #X text 260 37 from global bus;
 #X obj 554 396 outlet;
-#X obj 10 10 lzr/border 105 55;
-#X floatatom 14 15 5 20 300 1 BPM #0-bpm.gui.set #0-bpm.gui, f 5;
-#X floatatom 78 16 2 1 9 1 /4 #0-timesig.gui.set #0-timesig.gui, f
+#X obj 10 10 lzr/border 105 55 3 999 0 555 999;
+#X floatatom 14 14 5 20 300 1 BPM #0-bpm.gui.set #0-bpm.gui, f 5;
+#X floatatom 78 15 2 1 9 1 /4 #0-timesig.gui.set #0-timesig.gui, f
 2;
-#X obj 102 51 cnv 5 5 5 empty \$0-beat-light.gui empty 20 12 0 14 -261681
+#X obj 102 50 cnv 5 5 5 empty \$0-beat-light.gui empty 20 12 0 14 -261681
 -262144 0;
-#X obj 16 42 hsl 80 15 0.01 1 1 0 \$0-metro-volume.gui \$0-metro-volume.gui.set
-volume 3 8 1 10 -245500 -13381 -1 4800 0;
+#X obj 16 41 hsl 80 15 0.01 1 1 0 \$0-metro-volume.gui \$0-metro-volume.gui.set
+volume 3 8 1 10 -245500 -13381 -1 0 0;
 #X connect 0 0 1 0;
 #X connect 1 0 9 0;
 #X connect 2 0 0 1;
@@ -1089,32 +1089,32 @@ volume 3 8 1 10 -245500 -13381 -1 4800 0;
 #X connect 45 0 44 0;
 #X restore 91 256 pd \$0-settings;
 #N canvas 517 155 702 482 \$0-track-selector 0;
-#X obj 200 200 lzr/border 140 40;
 #X obj 211 249 + 1;
 #X msg 211 308 set-current-track \$1 \, redraw-main-window;
 #X obj 211 117 route force-track-number;
 #X obj 211 175 - 1;
-#X obj 210 219 hradio 15 1 0 8 \$0-track-selector-radio \$0-track-selector-radio.set
-empty 0 -8 0 10 -262144 -1 -1 7;
-#X text 224 202 Select track;
-#X text 213 219 1;
-#X text 228 219 2;
-#X text 243 219 3;
-#X text 258 219 4;
-#X text 273 219 5;
-#X text 288 219 6;
-#X text 303 219 7;
-#X text 318 219 8;
 #X obj 211 63 inlet;
 #X obj 211 366 outlet;
 #X text 207 36 from global events bus;
 #X text 209 396 to global events bus;
-#X connect 1 0 2 0;
-#X connect 2 0 16 0;
-#X connect 3 0 4 0;
-#X connect 4 0 5 0;
-#X connect 5 0 1 0;
-#X connect 15 0 3 0;
+#X obj 200 200 lzr/border 140 40 3 999 0 555 999;
+#X obj 209 218 hradio 15 1 0 8 \$0-track-selector-radio \$0-track-selector-radio.set
+empty 0 -8 0 10 -262144 -1 -1 0;
+#X text 223 201 Select track;
+#X text 212 218 1;
+#X text 227 218 2;
+#X text 242 218 3;
+#X text 257 218 4;
+#X text 272 218 5;
+#X text 287 218 6;
+#X text 302 218 7;
+#X text 317 218 8;
+#X connect 0 0 1 0;
+#X connect 1 0 5 0;
+#X connect 2 0 3 0;
+#X connect 3 0 9 0;
+#X connect 4 0 2 0;
+#X connect 9 0 0 0;
 #X coords 0 -1 1 1 140 40 2 200 200;
 #X restore 5 695 pd \$0-track-selector;
 #X obj 859 1203 s \$0-global-events;

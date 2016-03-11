@@ -1,5 +1,6 @@
-#N struct 1576-template float w float h float w2 float h2 float border-color
-float background-color float behind-color float shadow-color;
+#N struct 3149-template float w float h float w2 float h2 float border-color
+float background-color float behind-color float shadow-color float
+levitation;
 #N canvas 303 92 1158 771 10;
 #X obj 409 86 tof/imagebang images/record.gif images/record-bang.gif
 \$0-record-button-s \$0-record-button-r;
@@ -55,14 +56,14 @@ float background-color float behind-color float shadow-color;
 #X obj 62 22 inlet;
 #X text 43 5 from global event bus;
 #X text 98 675 to global event bus;
-#X obj 100 120 lzr/border 195 37;
-#X obj 109 123 tof/imagebang images/play.gif images/play-bang.gif \$0-play-button-s
+#X obj 100 120 lzr/border 195 37 3 999 0 555 999;
+#X obj 107 122 tof/imagebang images/play.gif images/play-bang.gif \$0-play-button-s
 \$0-play-button-r;
-#X obj 139 123 tof/imagebang images/pause.gif images/pause-bang.gif
+#X obj 137 122 tof/imagebang images/pause.gif images/pause-bang.gif
 \$0-pause-button-s \$0-pause-button-r;
-#X obj 169 123 tof/imagebang images/stop.gif images/stop-bang.gif \$0-stop-button-s
+#X obj 167 122 tof/imagebang images/stop.gif images/stop-bang.gif \$0-stop-button-s
 \$0-stop-button-r;
-#X obj 203 127 jmmmp/clock;
+#X obj 201 126 jmmmp/clock;
 #X connect 0 0 11 0;
 #X connect 1 0 28 0;
 #X connect 2 0 15 0;
