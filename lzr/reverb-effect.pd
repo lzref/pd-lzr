@@ -10,7 +10,7 @@
 #X obj 699 268 f;
 #X obj 665 260 f;
 #X obj 632 254 f;
-#X obj 632 345 prepend param;
+#X obj 632 345 lzr/pp param;
 #X obj 121 247 knob 32 32 0.11 1.1 0 0 \$0-kjhvjhgljhctrdfjhgfjhgg
 \$0-kgjkhjlfcjffurteyshfhfgjhdxhjgjgjfgchg empty 0 -8 0 8 -262144 -1
 -1 0 1;

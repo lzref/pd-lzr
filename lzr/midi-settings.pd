@@ -36,8 +36,8 @@
 #X obj 260 166 t a;
 #X obj 424 518 t a;
 #X obj 738 334 t a;
-#X obj 62 566 lzr/prepend names;
-#X obj 215 565 lzr/prepend number-by-name;
+#X obj 62 566 lzr/pp names;
+#X obj 215 565 lzr/pp number-by-name;
 #X obj 215 614 t a;
 #X obj 215 657 outlet;
 #N canvas 105 154 551 580 \$0-names 0;
@@ -151,7 +151,7 @@
 #X connect 14 0 9 0;
 #X connect 14 1 8 0;
 #X restore 574 526 pd \$0-midi-dialog;
-#X obj 690 569 lzr/prepend midi-dialog;
+#X obj 690 569 lzr/pp midi-dialog;
 #X obj 690 654 s pd;
 #N canvas 555 160 721 692 \$0-connect-by-names 0;
 #X obj 94 72 inlet;
@@ -172,7 +172,7 @@
 #X text 69 50 to connect to;
 #X obj 449 185 t a;
 #X obj 464 425 t a;
-#X obj 94 472 lzr/prepend append-items;
+#X obj 94 472 lzr/pp append-items;
 #X connect 0 0 1 0;
 #X connect 1 0 11 0;
 #X connect 2 0 3 0;

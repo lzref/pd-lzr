@@ -14,9 +14,9 @@
 #X obj 347 175 textfile;
 #X msg 347 137 read \$1 \, rewind \, bang;
 #X obj 315 203 t b a;
-#X obj 339 227 prepend load;
+#X obj 339 227 lzr/pp load;
 #X obj 176 103 savepanel;
-#X obj 212 337 prepend add;
+#X obj 212 337 lzr/pp add;
 #X msg 212 300;
 #X obj 218 271 mmb/my.hero.mmb \$0-files;
 #X connect 1 0 14 0;

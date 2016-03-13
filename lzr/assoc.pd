@@ -6,7 +6,7 @@
 #X obj 226 431 list split 1;
 #X obj 778 846 t a;
 #X obj 768 58 t a;
-#X obj 439 768 lzr/prepend add2;
+#X obj 439 768 lzr/pp add2;
 #X obj 365 720 t b a;
 #X msg 365 768 addcomma;
 #X obj 426 693 spigot;
@@ -28,7 +28,7 @@
 #X msg 173 266;
 #X obj 173 135 t b a;
 #X msg 173 173 addcomma;
-#X obj 258 173 lzr/prepend add2;
+#X obj 258 173 lzr/pp add2;
 #X obj 64 59 inlet;
 #X msg 453 174 set;
 #X obj 453 60 inlet;

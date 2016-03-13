@@ -50,7 +50,7 @@
 #X obj 1131 231 f;
 #X obj 1097 243 f;
 #X obj 1064 257 f;
-#X obj 1064 337 prepend param;
+#X obj 1064 337 lzr/pp param;
 #X connect 0 0 7 0;
 #X connect 0 0 19 0;
 #X connect 2 0 8 0;

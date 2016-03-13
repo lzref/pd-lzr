@@ -1,32 +1,32 @@
-#N struct 2436-template float w float h float w2 float h2 float border-color
+#N struct 2018-template float w float h float w2 float h2 float border-color
 float background-color float behind-color float shadow-color float
 levitation;
-#N struct 2439-template float w float h float w2 float h2 float border-color
+#N struct 2021-template float w float h float w2 float h2 float border-color
 float background-color float behind-color float shadow-color float
 levitation;
-#N struct 2442-template float w float h float w2 float h2 float border-color
+#N struct 2024-template float w float h float w2 float h2 float border-color
 float background-color float behind-color float shadow-color float
 levitation;
-#N struct 2445-template float w float h float w2 float h2 float border-color
+#N struct 2027-template float w float h float w2 float h2 float border-color
 float background-color float behind-color float shadow-color float
 levitation;
-#N struct 2448-template float w float h float w2 float h2 float border-color
+#N struct 2030-template float w float h float w2 float h2 float border-color
 float background-color float behind-color float shadow-color float
 levitation;
-#N struct 2451-template float w float h float w2 float h2 float border-color
+#N struct 2033-template float w float h float w2 float h2 float border-color
 float background-color float behind-color float shadow-color float
 levitation;
-#N struct 2454-template float w float h float w2 float h2 float border-color
+#N struct 2036-template float w float h float w2 float h2 float border-color
 float background-color float behind-color float shadow-color float
 levitation;
-#N struct 2457-template float w float h float w2 float h2 float border-color
+#N struct 2039-template float w float h float w2 float h2 float border-color
 float background-color float behind-color float shadow-color float
 levitation;
 #N canvas 194 22 1460 909 10;
 #X msg 961 26 window-size;
 #X obj 1268 76 iemguts/sendcanvas;
 #X obj 961 5 r \$1-windowsize;
-#N canvas 325 23 1351 916 \$0-effects-panel-behavior 0;
+#N canvas 325 23 1351 916 \$0-effects-panel-behavior 1;
 #X obj 42 109 loadbang;
 #X msg 42 135 1;
 #X obj 403 169 symbol;
@@ -763,6 +763,10 @@ dump-all-tracks, f 74;
 #X obj 1200 689 t a;
 #X obj 1200 153 t a;
 #X obj 533 384 t a;
+#X text 590 152 delete effects;
+#X obj 182 118 route set-current-track window-size add-effect new-effect-id
+delete-track-effects canvas-index-response save-parameters effect-params
+show-panel-guts, f 154;
 #N canvas 374 34 1252 864 \$0-persist-fx 0;
 #X obj 55 67 inlet;
 #X text 19 8 bang to initiate;
@@ -800,7 +804,7 @@ dump-all-tracks, f 74;
 #X obj 659 53 inlet;
 #X text 635 13 dump of parameters;
 #X text 634 31 from an effect;
-#X obj 702 280 prepend add;
+#X obj 702 280 lzr/pp add;
 #X obj 606 201 lzr/func;
 #X obj 566 729 t a;
 #X obj 566 141 t a;
@@ -814,8 +818,8 @@ dump-all-tracks, f 74;
 #X obj 702 361 route add-effect param clear-track;
 #X text 716 610 [track_num \, effect_num \, effect_name];
 #X obj 702 436 t a a a;
-#X obj 780 541 prepend;
-#X obj 780 574 prepend effect;
+#X obj 780 541 lzr/pp;
+#X obj 780 574 lzr/pp effect;
 #X msg 826 499 \$1 \$2 param;
 #X obj 1041 631 t a;
 #X obj 702 324 mmb/save.me.mmb effects \$1-persist;
@@ -866,17 +870,12 @@ dump-all-tracks, f 74;
 #X connect 49 2 40 0;
 #X connect 50 0 51 0;
 #X connect 51 0 30 0;
-#X connect 52 0 50 1;
 #X connect 53 0 46 0;
 #X connect 54 0 47 0;
 #X connect 55 0 21 0;
 #X connect 55 1 56 0;
 #X connect 56 0 54 1;
-#X restore 861 239 pd \$0-persist-fx;
-#X text 590 152 delete effects;
-#X obj 182 118 route set-current-track window-size add-effect new-effect-id
-delete-track-effects canvas-index-response save-parameters effect-params
-show-panel-guts, f 154;
+#X restore 898 223 pd \$0-persist-fx;
 #X connect 0 0 1 0;
 #X connect 1 0 3 0;
 #X connect 2 0 4 0;
@@ -904,7 +903,7 @@ show-panel-guts, f 154;
 #X connect 22 0 4 2;
 #X connect 22 0 17 0;
 #X connect 22 0 31 0;
-#X connect 23 0 51 0;
+#X connect 23 0 50 0;
 #X connect 28 0 27 0;
 #X connect 29 0 19 0;
 #X connect 30 0 20 0;
@@ -918,19 +917,19 @@ show-panel-guts, f 154;
 #X connect 40 0 28 0;
 #X connect 45 0 10 0;
 #X connect 46 0 47 0;
-#X connect 47 0 49 1;
+#X connect 47 0 51 1;
 #X connect 48 0 25 0;
-#X connect 49 0 45 0;
-#X connect 49 1 48 0;
-#X connect 51 0 3 0;
-#X connect 51 1 7 1;
-#X connect 51 2 2 0;
-#X connect 51 3 4 4;
-#X connect 51 4 18 0;
-#X connect 51 5 33 0;
-#X connect 51 6 49 0;
-#X connect 51 7 49 2;
-#X connect 51 8 40 0;
+#X connect 50 0 3 0;
+#X connect 50 1 7 1;
+#X connect 50 2 2 0;
+#X connect 50 3 4 4;
+#X connect 50 4 18 0;
+#X connect 50 5 33 0;
+#X connect 50 6 51 0;
+#X connect 50 7 51 2;
+#X connect 50 8 40 0;
+#X connect 51 0 45 0;
+#X connect 51 1 48 0;
 #X coords 0 916 1 915 100 100 0;
 #X restore 1075 51 pd \$0-effects-panel-behavior;
 #X obj 1075 5 inlet;
@@ -1003,7 +1002,7 @@ show-panel-guts, f 154;
 #X obj 166 7 metro 1000;
 #X obj 137 7 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
 ;
-#X obj 166 29 counter;
+#X obj 166 29 cyclone/counter;
 #X msg 273 50 select \$1;
 #X msg 249 28 deselect;
 #X msg 112 29 set 21;
@@ -1051,4 +1050,4 @@ show-panel-guts, f 154;
 #X connect 76 0 73 0;
 #X connect 76 1 74 0;
 #X connect 76 2 77 0;
-#X coords 0 -1 1 1 1390 200 2 0 100;
+#X coords 0 -1 1 1 1390 205 2 0 100;

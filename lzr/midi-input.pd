@@ -4,7 +4,7 @@
 #X obj 106 188 t b f;
 #X obj 138 314 pack f f;
 #X msg 158 224 0;
-#X obj 138 372 prepend midi-note;
+#X obj 138 372 lzr/pp midi-note;
 #X obj 278 79 inlet;
 #X text 266 35 midi channel number;
 #X text 270 53 to listen;
@@ -19,7 +19,7 @@
 #X msg 475 227 0;
 #X obj 492 79 ctlin;
 #X obj 385 190 + 1;
-#X obj 455 364 prepend midi-control;
+#X obj 455 364 lzr/pp midi-control;
 #X obj 211 189 moses \$1;
 #X obj 318 190 moses \$1;
 #X obj 360 76 loadbang;

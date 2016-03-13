@@ -1,6 +1,6 @@
 #N canvas 652 152 646 495 10;
 #X obj 49 141 until;
-#X obj 49 174 counter;
+#X obj 49 174 cyclone/counter;
 #X obj 49 110 t b f;
 #X obj 108 140 t a;
 #X obj 49 24 inlet;

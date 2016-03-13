@@ -28,7 +28,7 @@ a;
 #X text 700 101 needs to send certain data ("arguments") to another
 ;
 #X msg 475 619 addcomma;
-#X obj 292 610 prepend add2;
+#X obj 292 610 lzr/pp add2;
 #X msg 255 610 set;
 #X msg 483 559 0;
 #X msg 516 559 1;

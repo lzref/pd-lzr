@@ -30,7 +30,7 @@
 #X text 1009 454 <= expected object ID;
 #X text 1030 474 of dynamically created;
 #X text 1032 495 effect box;
-#X obj 960 414 prepend set;
+#X obj 960 414 lzr/pp set;
 #X msg 960 454 58;
 #N canvas 307 129 511 206 \$0-next-object-id 0;
 #X obj 27 31 inlet;
@@ -54,7 +54,7 @@
 #X text 591 720 inlet/outlet ID's are hardcoded =>;
 #X text 571 743 <= if they change \, use this tool;
 #X msg 404 569 effect-params add-effect \$2 \$3 \$1;
-#X obj 433 617 prepend effect-params param;
+#X obj 433 617 lzr/pp effect-params param;
 #X obj 655 6 t a;
 #X msg 844 535 obj 700 100 \$1 \$2 \$3 \$4 \, connect 0 0 \$5 0 \,
 connect 1 0 \$5 1 \, connect \$5 0 2 0 \, connect \$5 1 3 0 \, connect
@@ -63,7 +63,7 @@ connect 1 0 \$5 1 \, connect \$5 0 2 0 \, connect \$5 1 3 0 \, connect
 #X text 39 426 patch;
 #X text 40 393 within the;
 #X obj 209 454 route canvas-index suicide save-effect param;
-#X obj 550 484 prepend param;
+#X obj 550 484 lzr/pp param;
 #X obj 655 549 t a;
 #X obj 960 331 lzr/onsave;
 #X obj 209 328 r \$2-global-events;
