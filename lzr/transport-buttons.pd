@@ -1,7 +1,4 @@
-#N struct 1164-template float w float h float w2 float h2 float border-color
-float background-color float behind-color float shadow-color float
-levitation;
-#N struct 1170-template float w float h float w2 float h2 float border-color
+#N struct 2022-template float w float h float w2 float h2 float border-color
 float background-color float behind-color float shadow-color float
 levitation;
 #N canvas 303 92 1158 771 10;
@@ -53,23 +50,23 @@ levitation;
 #X obj 62 22 inlet;
 #X text 43 5 from global event bus;
 #X text 98 675 to global event bus;
-#X obj 100 120 lzr/border 195 37 3 999 0 555 999;
-#X obj 197 124 lzr/clock;
-#X obj 107 122 tof/imagebang images/play.gif images/play-bang.gif \$0-play-button-s
-\$0-play-button-r;
-#X obj 137 122 tof/imagebang images/pause.gif images/pause-bang.gif
-\$0-pause-button-s \$0-pause-button-r;
-#X obj 167 122 tof/imagebang images/stop.gif images/stop-bang.gif \$0-stop-button-s
-\$0-stop-button-r;
 #X obj 579 394 t b b b;
 #X msg 749 477 stop;
 #X msg 645 483 start;
 #X msg 930 377 start;
+#X obj 100 120 lzr/shade 195 37 4;
+#X obj 194 124 lzr/clock;
+#X obj 104 122 tof/imagebang images/play.gif images/play-bang.gif \$0-play-button-s
+\$0-play-button-r;
+#X obj 134 122 tof/imagebang images/pause.gif images/pause-bang.gif
+\$0-pause-button-s \$0-pause-button-r;
+#X obj 164 122 tof/imagebang images/stop.gif images/stop-bang.gif \$0-stop-button-s
+\$0-stop-button-r;
 #X connect 0 0 11 0;
 #X connect 1 0 24 0;
 #X connect 2 0 15 0;
-#X connect 3 0 50 0;
-#X connect 4 0 50 0;
+#X connect 3 0 45 0;
+#X connect 4 0 45 0;
 #X connect 5 0 24 0;
 #X connect 6 0 24 0;
 #X connect 7 0 24 0;
@@ -89,11 +86,11 @@ levitation;
 #X connect 25 0 8 0;
 #X connect 26 0 27 0;
 #X connect 27 0 28 0;
-#X connect 28 0 46 0;
+#X connect 28 0 50 0;
 #X connect 29 0 30 0;
 #X connect 30 0 2 0;
 #X connect 31 0 29 0;
-#X connect 31 1 52 0;
+#X connect 31 1 47 0;
 #X connect 31 2 17 0;
 #X connect 32 0 30 0;
 #X connect 33 0 1 0;
@@ -101,25 +98,25 @@ levitation;
 #X connect 34 0 5 0;
 #X connect 34 1 37 0;
 #X connect 35 0 6 0;
-#X connect 35 1 50 0;
+#X connect 35 1 45 0;
 #X connect 36 0 7 0;
 #X connect 36 1 31 0;
 #X connect 37 0 38 0;
-#X connect 37 1 51 0;
+#X connect 37 1 46 0;
 #X connect 37 2 16 0;
 #X connect 38 0 30 0;
 #X connect 39 0 40 0;
-#X connect 39 1 53 0;
+#X connect 39 1 48 0;
 #X connect 39 2 13 0;
 #X connect 40 0 30 0;
 #X connect 42 0 25 0;
-#X connect 47 0 8 0;
-#X connect 48 0 9 0;
-#X connect 49 0 10 0;
-#X connect 50 0 32 0;
-#X connect 50 1 51 0;
-#X connect 50 2 14 0;
-#X connect 51 0 26 0;
-#X connect 52 0 26 0;
-#X connect 53 0 26 0;
+#X connect 45 0 32 0;
+#X connect 45 1 46 0;
+#X connect 45 2 14 0;
+#X connect 46 0 26 0;
+#X connect 47 0 26 0;
+#X connect 48 0 26 0;
+#X connect 51 0 8 0;
+#X connect 52 0 9 0;
+#X connect 53 0 10 0;
 #X coords 0 -1 1 1 195 37 2 100 120;

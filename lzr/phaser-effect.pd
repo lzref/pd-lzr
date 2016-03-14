@@ -1,20 +1,4 @@
 #N canvas 103 216 1436 566 10;
-#X obj 109 245 knob 32 32 0 10 0 1 empty empty empty 0 -8 0 8 -262144
--1 -1 0 1;
-#X text 107 225 Speed;
-#X obj 170 246 knob 32 32 0 3 0 1 empty empty empty 0 -8 0 8 -262144
--1 -1 0 1;
-#X text 223 227 Feedback;
-#X obj 234 245 knob 32 32 -0.9 0.9 0 1 empty empty empty 0 -8 0 8 -262144
--1 -1 1550 1;
-#X text 170 209 Phaser;
-#X text 169 226 Depth;
-#X obj 102 283 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 0 256;
-#X obj 165 283 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 0 256;
-#X obj 230 283 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 0 256;
 #X obj 427 118 inlet~;
 #X obj 427 371 outlet~;
 #X obj 780 118 inlet~;
@@ -51,54 +35,73 @@
 #X obj 1097 243 f;
 #X obj 1064 257 f;
 #X obj 1064 337 lzr/pp param;
-#X connect 0 0 7 0;
-#X connect 0 0 19 0;
-#X connect 2 0 8 0;
-#X connect 2 0 20 0;
-#X connect 4 0 9 0;
-#X connect 4 0 21 0;
-#X connect 10 0 14 0;
-#X connect 12 0 15 0;
-#X connect 14 0 11 0;
-#X connect 15 0 13 0;
-#X connect 16 0 18 0;
-#X connect 18 0 38 0;
-#X connect 18 1 39 0;
-#X connect 19 0 27 0;
-#X connect 19 0 34 0;
-#X connect 20 0 26 0;
-#X connect 20 0 33 0;
-#X connect 21 0 25 0;
-#X connect 21 0 32 0;
-#X connect 22 0 0 0;
-#X connect 23 0 2 0;
-#X connect 24 0 4 0;
-#X connect 25 0 30 0;
-#X connect 26 0 29 0;
-#X connect 27 0 28 0;
-#X connect 28 0 14 1;
-#X connect 29 0 14 2;
-#X connect 30 0 14 3;
-#X connect 31 0 45 0;
-#X connect 32 0 37 0;
-#X connect 33 0 36 0;
-#X connect 34 0 35 0;
-#X connect 35 0 15 1;
-#X connect 35 0 44 1;
-#X connect 36 0 15 2;
-#X connect 36 0 43 1;
-#X connect 37 0 15 3;
-#X connect 37 0 42 1;
-#X connect 38 0 44 0;
-#X connect 38 1 43 0;
-#X connect 38 2 42 0;
-#X connect 39 0 40 0;
-#X connect 40 0 41 0;
-#X connect 41 0 22 0;
-#X connect 41 1 23 0;
-#X connect 41 2 24 0;
-#X connect 42 0 31 2;
-#X connect 43 0 31 1;
-#X connect 44 0 31 0;
-#X connect 45 0 17 0;
+#X obj 100 200 lzr/shade 190 190 4;
+#X obj 110 262 knob 32 32 0 10 0 1 \$0-unused-speed-knob \$0-unused-speed-knob.set
+empty 0 -8 0 8 -262144 -1 -1 0 1;
+#X text 108 242 Speed;
+#X obj 171 263 knob 32 32 0 3 0 1 \$0-unused-depth-knob \$0-unused-depth-knob.set
+empty 0 -8 0 8 -262144 -1 -1 0 1;
+#X text 224 244 Feedback;
+#X obj 235 262 knob 32 32 -0.9 0.9 0 1 \$0-unused-feedback-knob \$0-unused-feedback-knob.set
+empty 0 -8 0 8 -262144 -1 -1 1550 1;
+#X text 171 220 Phaser;
+#X text 170 243 Depth;
+#X obj 103 300 nbx 5 14 -1e+37 1e+37 0 0 \$0-unused-speed-textbox \$0-unused-speed-textbox.set
+empty 0 -8 0 10 -262144 -1 -1 0 256;
+#X obj 166 300 nbx 5 14 -1e+37 1e+37 0 0 \$0-unused-depth-textbox \$0-unused-depth-textbox.set
+empty 0 -8 0 10 -262144 -1 -1 0 256;
+#X obj 231 300 nbx 5 14 -1e+37 1e+37 0 0 \$0-unused-feedback-textbox
+\$0-unused-feedback-textbox.set empty 0 -8 0 10 -262144 -1 -1 0 256
+;
+#X text 172 220 Phaser;
+#X connect 0 0 4 0;
+#X connect 2 0 5 0;
+#X connect 4 0 1 0;
+#X connect 5 0 3 0;
+#X connect 6 0 8 0;
+#X connect 8 0 28 0;
+#X connect 8 1 29 0;
+#X connect 9 0 17 0;
+#X connect 9 0 24 0;
+#X connect 10 0 16 0;
+#X connect 10 0 23 0;
+#X connect 11 0 15 0;
+#X connect 11 0 22 0;
+#X connect 12 0 37 0;
+#X connect 13 0 39 0;
+#X connect 14 0 41 0;
+#X connect 15 0 20 0;
+#X connect 16 0 19 0;
+#X connect 17 0 18 0;
+#X connect 18 0 4 1;
+#X connect 19 0 4 2;
+#X connect 20 0 4 3;
+#X connect 21 0 35 0;
+#X connect 22 0 27 0;
+#X connect 23 0 26 0;
+#X connect 24 0 25 0;
+#X connect 25 0 5 1;
+#X connect 25 0 34 1;
+#X connect 26 0 5 2;
+#X connect 26 0 33 1;
+#X connect 27 0 5 3;
+#X connect 27 0 32 1;
+#X connect 28 0 34 0;
+#X connect 28 1 33 0;
+#X connect 28 2 32 0;
+#X connect 29 0 30 0;
+#X connect 30 0 31 0;
+#X connect 31 0 12 0;
+#X connect 31 1 13 0;
+#X connect 31 2 14 0;
+#X connect 32 0 21 2;
+#X connect 33 0 21 1;
+#X connect 34 0 21 0;
+#X connect 35 0 7 0;
+#X connect 37 0 44 0;
+#X connect 37 0 9 0;
+#X connect 39 0 45 0;
+#X connect 39 0 10 0;
+#X connect 41 0 46 0;
+#X connect 41 0 11 0;
 #X coords 0 -1 1 1 190 190 2 100 200;

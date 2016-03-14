@@ -1,6 +1,3 @@
-#N struct 2653-template float w float h float w2 float h2 float border-color
-float background-color float behind-color float shadow-color float
-levitation;
 #N canvas 517 22 850 870 10;
 #X obj 152 25 inlet;
 #X obj 152 91 route start stop;
@@ -41,8 +38,8 @@ levitation;
 #X obj 364 364 mod 60;
 #X obj 235 24 lzr/onsave;
 #X msg 235 59 stop;
-#X obj 300 800 lzr/border 90 25 1 999 0 555 999;
-#X obj 301 801 cnv 20 87 22 empty \$0-display.set 00:00:00 6 13 1 20
+#X obj 300 800 lzr/shade 90 25 2;
+#X obj 301 801 cnv 10 86 21 empty \$0-display.set 00:00:00 6 13 1 20
 -262144 -66577 0;
 #X connect 0 0 1 0;
 #X connect 1 0 3 0;

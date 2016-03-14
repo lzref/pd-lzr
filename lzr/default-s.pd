@@ -1,0 +1,18 @@
+#N canvas 570 103 987 721 10;
+#X obj 162 201 list tosymbol;
+#X obj 60 263 sel _empty_sym_;
+#X obj 57 71 inlet;
+#X obj 63 113 t s b;
+#X obj 60 367 symbol \$1;
+#X obj 161 527 outlet;
+#X obj 306 86 inlet;
+#X obj 307 270 t a;
+#X connect 0 0 1 1;
+#X connect 1 0 4 0;
+#X connect 1 1 5 0;
+#X connect 2 0 3 0;
+#X connect 3 0 1 0;
+#X connect 3 1 0 0;
+#X connect 4 0 5 0;
+#X connect 6 0 7 0;
+#X connect 7 0 4 1;
