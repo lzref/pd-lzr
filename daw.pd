@@ -1,28 +1,40 @@
-#N struct 3398-template float w float h float w2 float h2 float border-color
+#N struct 9302-template float w float h float w2 float h2 float border-color
 float background-color float behind-color float shadow-color float
 levitation float text-color symbol label float boxpos float symbolpos
 ;
-#N struct 3402-template float w float h float w2 float h2 float border-color
+#N struct 9306-template float w float h float w2 float h2 float border-color
 float background-color float behind-color float shadow-color float
 levitation float text-color symbol label float boxpos float symbolpos
 ;
-#N struct 3406-template float w float h float w2 float h2 float border-color
+#N struct 9310-template float w float h float w2 float h2 float border-color
 float background-color float behind-color float shadow-color float
 levitation float text-color symbol label float boxpos float symbolpos
 ;
-#N struct 3410-template float w float h float w2 float h2 float border-color
+#N struct 8525-template float w float h float w2 float h2 float border-color
 float background-color float behind-color float shadow-color float
 levitation float text-color symbol label float boxpos float symbolpos
 ;
-#N struct 3414-template float w float h float w2 float h2 float border-color
+#N struct 8529-template float w float h float w2 float h2 float border-color
 float background-color float behind-color float shadow-color float
 levitation float text-color symbol label float boxpos float symbolpos
 ;
-#N struct 3418-template float w float h float w2 float h2 float border-color
+#N struct 8533-template float w float h float w2 float h2 float border-color
 float background-color float behind-color float shadow-color float
 levitation float text-color symbol label float boxpos float symbolpos
 ;
-#N struct 3422-template float w float h float w2 float h2 float border-color
+#N struct 8537-template float w float h float w2 float h2 float border-color
+float background-color float behind-color float shadow-color float
+levitation float text-color symbol label float boxpos float symbolpos
+;
+#N struct 8541-template float w float h float w2 float h2 float border-color
+float background-color float behind-color float shadow-color float
+levitation float text-color symbol label float boxpos float symbolpos
+;
+#N struct 8545-template float w float h float w2 float h2 float border-color
+float background-color float behind-color float shadow-color float
+levitation float text-color symbol label float boxpos float symbolpos
+;
+#N struct 8549-template float w float h float w2 float h2 float border-color
 float background-color float behind-color float shadow-color float
 levitation float text-color symbol label float boxpos float symbolpos
 ;
@@ -104,8 +116,6 @@ levitation float text-color symbol label float boxpos float symbolpos
 #X obj 777 61 inlet;
 #X obj 893 68 inlet;
 #X text 550 669 to global events bus;
-#X obj 80 482 print b4 param;
-#X obj 158 603 print after persister;
 #X connect 1 0 12 0;
 #X connect 2 0 11 0;
 #X connect 3 0 10 0;
@@ -118,13 +128,11 @@ levitation float text-color symbol label float boxpos float symbolpos
 #X connect 10 0 0 0;
 #X connect 11 0 0 0;
 #X connect 12 0 0 0;
-#X connect 12 0 27 0;
 #X connect 13 0 0 0;
 #X connect 14 0 0 0;
 #X connect 15 0 0 0;
 #X connect 16 0 0 0;
 #X connect 17 0 1 0;
-#X connect 17 0 26 0;
 #X connect 18 0 2 0;
 #X connect 19 0 3 0;
 #X connect 20 0 4 0;
@@ -132,7 +140,7 @@ levitation float text-color symbol label float boxpos float symbolpos
 #X connect 22 0 6 0;
 #X connect 23 0 7 0;
 #X connect 24 0 8 0;
-#X restore 151 629 pd \$0-onsave, f 59;
+#X restore 151 629 pd \$0-onsave;
 #X text 743 715 to global event bus;
 #X connect 0 0 36 0;
 #X connect 1 0 36 1;
@@ -197,49 +205,34 @@ levitation float text-color symbol label float boxpos float symbolpos
 #X coords 0 -1 1 1 475 220 2 100 270;
 #X restore 5 956 pd mixer;
 #N canvas 234 22 1411 918 persist-presets 0;
-#X obj 15 17 bng 15 250 50 0 \$0-load-project.gui empty empty 17 7
+#X obj 40 539 bng 15 250 50 0 \$0-load-project.gui empty empty 17 7
 0 10 -262144 -1 -1;
-#X text 33 15 Load;
-#X obj 15 40 bng 15 250 50 0 \$0-save-project.gui empty empty 17 7
+#X text 58 537 Load;
+#X obj 40 562 bng 15 250 50 0 \$0-save-project.gui empty empty 17 7
 0 10 -262144 -1 -1;
-#X text 33 39 Save;
-#X obj 722 678 textfile;
-#X msg 727 565 clear;
-#X msg 861 488 save;
-#X msg 654 583 write \$1;
-#X obj 982 416 textfile;
-#X msg 982 378 read \$1 \, rewind \, bang;
-#X obj 926 464 t b a;
-#X obj 861 584 mmb/my.hero.mmb \$0-persist;
-#X obj 15 63 bng 15 250 50 0 \$0-save-project-as.gui empty empty 17
+#X text 58 561 Save;
+#X obj 40 585 bng 15 250 50 0 \$0-save-project-as.gui empty empty 17
 7 0 10 -262144 -1 -1;
-#X text 33 62 Save As;
-#X obj 949 141 r \$0-load-project.gui;
-#X obj 253 93 r \$0-save-project.gui;
-#X obj 10 91 cnv 15 100 60 \$0-project-name.gui \$0-project-name.gui.set
-New-Saving 20 12 0 14 -233017 -66577 0;
-#X msg 359 479 label \$1;
-#X obj 359 502 s \$0-project-name.gui.set;
-#X obj 766 141 r \$0-save-project-as.gui;
+#X text 58 584 Save As;
+#X msg 361 480 label \$1;
+#X obj 13 276 s \$0-project-name.gui.set;
 #X obj 253 499 moses 1;
-#X obj 292 769 t a;
-#X obj 517 786 t a;
-#X obj 564 609 t a;
-#X obj 564 206 t a;
+#X obj 299 769 t a;
+#X obj 517 823 t a;
+#X obj 553 695 t a;
+#X obj 553 218 t a;
 #X obj 253 448 int;
-#X msg 268 424 1;
+#X msg 271 410 1;
 #X text 128 450 has the project;
 #X text 128 468 been saved?;
-#X obj 292 675 symbol;
-#X obj 292 646 t b;
-#X obj 359 448 iemlib/splitfilename;
-#X msg 631 466 saving \$1;
-#X msg 1156 402 loading \$1;
-#X text 352 241 change current project;
-#X text 562 121 on loadbang;
-#X text 361 593 show save dialog;
-#X text 303 792 save project to this location;
-#X obj 306 240 t a;
+#X obj 299 675 symbol;
+#X obj 299 646 t b;
+#X obj 361 449 iemlib/splitfilename;
+#X text 355 318 change current project;
+#X text 439 156 on loadbang;
+#X text 393 604 show save dialog;
+#X text 284 821 save project to this location;
+#X obj 315 350 t a;
 #X text 103 672 path to current project;
 #N canvas 572 64 862 838 \$0-project-chooser 0;
 #X obj 353 330 hcs/sys_gui;
@@ -339,10 +332,8 @@ New-Saving 20 12 0 14 -233017 -66577 0;
 #X connect 44 0 23 0;
 #X connect 44 1 45 0;
 #X connect 45 0 18 0;
-#X restore 838 223 pd \$0-project-chooser;
-#X msg 949 175 load;
-#X msg 766 177 save;
-#X obj 306 378 t b s s;
+#X restore 838 293 pd \$0-project-chooser;
+#X obj 315 378 t b s s;
 #X msg 253 522 save;
 #X obj 253 575 t a;
 #N canvas 242 50 1295 801 \$0-remember-last-project 0;
@@ -409,227 +400,130 @@ New-Saving 20 12 0 14 -233017 -66577 0;
 #X connect 28 0 17 0;
 #X connect 29 0 0 0;
 #X connect 30 0 23 0;
-#X restore 553 102 pd \$0-remember-last-project;
-#X text 933 241 load;
-#X text 833 300 save;
-#X obj 517 592 t a;
-#X obj 631 442 iemlib/splitfilename;
-#X obj 1156 379 iemlib/splitfilename;
-#X obj 80 12 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
--1;
-#X obj 97 48 iemguts/sendcanvas;
-#X msg 97 24 vis 1;
-#X msg 209 364 bang;
-#N canvas 687 29 682 858 \$0-project-params-storage 0;
-#X obj 43 48 inlet;
-#X obj 28 189 outlet;
-#X msg 121 96 effects clear-track 1 \, effects clear-track 2 \, effects
-clear-track 3 \, effects clear-track 4 \, effects clear-track 5 \,
-effects clear-track 6 \, effects clear-track 7 \, effects clear-track
-8 \, persister metronome timesig 3 \, persister metronome bpm 77 \,
-persister metronome volume 0.012626 \, persister mixer 0 param pan
-0.854839 \, persister mixer 0 param volume 0.0339831 \, persister mixer
-0 param mute 1 \, persister mixer 1 pan 0.177419 \, persister mixer
-1 volume 0.313644 \, persister mixer 1 mute 0 \, persister mixer 1
-solo 1 \, persister mixer 2 pan 0.790323 \, persister mixer 2 volume
-0.20339 \, persister mixer 2 mute 1 \, persister mixer 2 solo 0 \,
-persister mixer 3 pan 0.370968 \, persister mixer 3 volume 0.5 \, persister
-mixer 3 mute 1 \, persister mixer 3 solo 0 \, persister mixer 4 pan
-0 \, persister mixer 4 volume 0.923729 \, persister mixer 4 mute 0
-\, persister mixer 4 solo 1 \, persister mixer 5 pan 0.5 \, persister
-mixer 5 volume 1 \, persister mixer 5 mute 0 \, persister mixer 5 solo
-0 \, persister mixer 6 pan 1 \, persister mixer 6 volume 0.5 \, persister
-mixer 6 mute 0 \, persister mixer 6 solo 0 \, persister mixer 7 pan
-0.5 \, persister mixer 7 volume 0.745763 \, persister mixer 7 mute
-0 \, persister mixer 7 solo 0 \, persister mixer 8 pan 0.5 \, persister
-mixer 8 volume 0.20339 \, persister mixer 8 mute 0 \, persister mixer
-8 solo 0 \, clip-params 1 1 track-name track1_1 \, clip-params 1 2
-track-name track1_2 \, clip-params 1 3 track-name track1_3 \, clip-params
-1 4 track-name track1_4 \, clip-params 1 5 track-name track1_5 \, clip-params
-1 6 track-name track1_6 \, clip-params 1 7 track-name track1_7 \, clip-params
-1 8 track-name track1_8 \, clip-params 2 1 track-name track2_1 \, clip-params
-2 2 track-name track2_2 \, clip-params 2 3 track-name track2_3 \, clip-params
-2 4 track-name track2_4 \, clip-params 2 5 track-name track2_5 \, clip-params
-2 6 track-name track2_6 \, clip-params 2 7 track-name track2_7 \, clip-params
-2 8 track-name track2_8 \, clip-params 3 1 track-name track3_1 \, clip-params
-3 2 track-name track3_2 \, clip-params 3 3 track-name track3_3 \, clip-params
-3 4 track-name track3_4 \, clip-params 3 5 track-name track3_5 \, clip-params
-3 6 track-name track3_6 \, clip-params 3 7 track-name track3_7 \, clip-params
-3 8 track-name track3_8 \, clip-params 4 1 track-name track4_1 \, clip-params
-4 2 track-name track4_2 \, clip-params 4 3 track-name track4_3 \, clip-params
-4 4 track-name track4_4 \, clip-params 4 5 track-name track4_5 \, clip-params
-4 6 track-name track4_6 \, clip-params 4 7 track-name track4_7 \, clip-params
-4 8 track-name track4_8 \, clip-params 5 1 track-name track5_1 \, clip-params
-5 2 track-name track5_2 \, clip-params 5 3 track-name track5_3 \, clip-params
-5 4 track-name track5_4 \, clip-params 5 5 track-name track5_5 \, clip-params
-5 6 track-name track5_6 \, clip-params 5 7 track-name track5_7 \, clip-params
-5 8 track-name track5_8 \, clip-params 6 1 track-name track6_1 \, clip-params
-6 2 track-name track6_2 \, clip-params 6 3 track-name track6_3 \, clip-params
-6 4 track-name track6_4 \, clip-params 6 5 track-name track6_5 \, clip-params
-6 6 track-name track6_6 \, clip-params 6 7 track-name track6_7 \, clip-params
-6 8 track-name track6_8 \,;
-#X text 122 25 just a message box \;;
-#X text 124 42 mmm/my.hero.mmb knows;
-#X text 122 58 how to save all project;
-#X text 123 74 settings here;
+#X restore 553 151 pd \$0-remember-last-project;
+#X text 990 312 load;
+#X text 889 350 save;
+#X obj 517 646 t a;
+#X obj 507 65 iemguts/sendcanvas;
+#X msg 507 41 vis 1;
+#X obj 1173 34 inlet;
+#X text 1167 15 from global event bus;
+#X obj 739 797 outlet;
+#X text 723 819 to global event bus;
+#X text 439 185 opened project;
+#X text 439 170 outputs last;
+#X obj 553 189 lzr/pp load;
+#X obj 299 711 lzr/pp save;
+#X obj 1173 62 route persister;
+#X obj 1173 120 route param;
+#N canvas 162 144 623 610 \$0-collect-and-save 0;
+#X obj 80 63 inlet;
+#X obj 337 447 outlet;
+#X text 319 486 to global event bus;
+#X obj 339 64 inlet;
+#X text 19 35 symbol: save project to filename;
+#X obj 77 130 t s s b b b b b;
+#X msg 203 170 save-parameters;
+#X obj 215 326 textfile;
+#X msg 187 248 clear;
+#X obj 247 275 lzr/pp add;
+#X obj 288 206 lzr/func;
+#X msg 93 203 write \$1;
+#X obj 36 324 iemlib/splitfilename;
+#X msg 37 354 saving \$1;
+#X text 300 14 params from all subsystems;
+#X text 298 37 (addressed to "persister param");
+#X connect 0 0 5 0;
+#X connect 3 0 10 1;
+#X connect 5 0 12 0;
+#X connect 5 1 11 0;
+#X connect 5 5 6 0;
+#X connect 5 6 8 0;
+#X connect 6 0 10 0;
+#X connect 8 0 7 0;
+#X connect 9 0 7 0;
+#X connect 10 0 9 0;
+#X connect 10 1 1 0;
+#X connect 11 0 7 0;
+#X connect 12 0 13 0;
+#X connect 13 0 1 0;
+#X restore 1022 495 pd \$0-collect-and-save;
+#N canvas 428 236 632 641 \$0-load-from-file 0;
+#X obj 151 325 textfile;
+#X msg 151 287 read \$1 \, rewind \, bang;
+#X obj 95 373 t b a;
+#X msg 325 310 loading \$1;
+#X obj 325 287 iemlib/splitfilename;
+#X obj 95 286 t a;
+#X msg 325 399 force-track-number 1;
+#X text 328 419 to track switcher;
+#X text 330 435 GUI;
+#X obj 151 175 t a a;
+#X obj 151 69 inlet;
+#X text 118 33 send a symbol to load;
+#X text 119 49 project from that filename;
+#X obj 127 521 outlet;
+#X text 97 548 to global events bus;
 #X connect 0 0 2 0;
-#X connect 2 0 1 0;
-#X restore 844 613 pd \$0-project-params-storage;
-#X obj 1109 702 t a;
-#X obj 926 377 t a;
-#X msg 1190 599 force-track-number 1;
-#X text 1203 619 to track switcher;
-#X text 1205 635 GUI;
-#X msg 657 740 save-parameters;
-#N canvas 259 236 640 437 \$0-save-clip-params 0;
-#X obj 104 64 inlet;
-#X obj 104 275 outlet;
-#X obj 104 163 mmb/save.me.mmb clip-params \$0-persist;
-#X obj 367 64 inlet;
-#X text 354 8 bang to initiate;
-#X text 353 22 saving process;
-#X text 348 41 (clears all saved data);
-#X msg 367 112 clear;
-#X obj 104 119 lzr/pp add;
-#X obj 104 223 lzr/pp set-clip-param;
-#X connect 0 0 8 0;
-#X connect 2 0 9 0;
-#X connect 3 0 7 0;
-#X connect 7 0 2 1;
-#X connect 8 0 2 0;
+#X connect 0 1 6 0;
+#X connect 1 0 0 0;
+#X connect 2 0 5 0;
+#X connect 2 1 13 0;
+#X connect 3 0 13 0;
+#X connect 4 0 3 0;
+#X connect 5 0 0 0;
+#X connect 6 0 13 0;
 #X connect 9 0 1 0;
-#X restore 1138 102 pd \$0-save-clip-params;
-#X obj 1311 379 t a;
-#X obj 810 404 t s s b b b b b;
-#X obj 912 284 t a;
-#X obj 1357 350 t a;
-#X obj 1357 70 t a;
-#X obj 1138 34 inlet;
-#X text 1132 15 from global event bus;
-#X obj 631 797 outlet;
-#X text 615 819 to global event bus;
-#X text 562 150 opened project;
-#X text 562 135 outputs last;
-#X obj 594 483 t a;
-#X obj 982 266 t a a;
-#N canvas 90 324 644 557 \$0-filter-events 0;
-#X obj 43 43 inlet;
-#X obj 43 429 outlet;
-#X obj 358 436 outlet;
-#X text 351 470 to global events bus;
-#X text 13 18 from project's textfile;
-#X text 25 461 to my.hero.mmb;
-#X obj 43 227 t a;
-#X obj 43 78 route mixer-param;
-#X obj 119 226 lzr/pp mixer-param;
-#X connect 0 0 7 0;
-#X connect 6 0 1 0;
-#X connect 7 0 8 0;
-#X connect 7 1 6 0;
-#X connect 8 0 2 0;
-#X restore 958 503 pd \$0-filter-events;
-#X obj 1138 62 route clip-params persister;
-#N canvas 335 104 582 473 \$0-persister 0;
-#X obj 70 66 inlet;
-#X obj 70 129 route param;
-#X obj 70 342 outlet;
-#X obj 319 131 inlet;
-#X text 306 75 bang to initiate;
-#X text 305 89 saving process;
-#X text 300 108 (clears all saved data);
-#X msg 319 179 clear;
-#X obj 70 230 mmb/save.me.mmb persister \$0-persist;
-#X obj 70 186 lzr/pp add;
-#X connect 0 0 1 0;
-#X connect 1 0 9 0;
-#X connect 3 0 7 0;
-#X connect 7 0 8 1;
-#X connect 8 0 2 0;
-#X connect 9 0 8 0;
-#X restore 1246 198 pd \$0-persister;
-#X obj 958 541 lzr/pp load;
-#X obj 740 653 lzr/pp add;
-#X obj 553 177 lzr/pp load;
-#X obj 292 711 lzr/pp save;
-#X connect 5 0 4 0;
-#X connect 6 0 11 0;
-#X connect 7 0 4 0;
-#X connect 8 0 10 0;
-#X connect 8 1 59 0;
-#X connect 9 0 8 0;
-#X connect 10 0 58 0;
-#X connect 10 1 77 0;
-#X connect 11 0 56 0;
-#X connect 14 0 41 0;
-#X connect 15 0 25 0;
-#X connect 17 0 18 0;
-#X connect 19 0 42 0;
-#X connect 20 0 44 0;
-#X connect 20 1 30 0;
-#X connect 21 0 22 0;
-#X connect 22 0 49 0;
-#X connect 23 0 24 0;
-#X connect 24 0 40 0;
-#X connect 25 0 20 0;
-#X connect 26 0 25 1;
-#X connect 29 0 83 0;
-#X connect 30 0 29 0;
-#X connect 31 1 17 0;
-#X connect 32 0 71 0;
-#X connect 33 0 57 0;
-#X connect 38 0 43 0;
-#X connect 40 0 38 0;
-#X connect 40 1 65 0;
-#X connect 40 2 76 0;
-#X connect 41 0 40 0;
-#X connect 42 0 40 0;
-#X connect 43 0 26 0;
-#X connect 43 1 29 1;
-#X connect 43 2 31 0;
+#X connect 9 1 4 0;
+#X connect 10 0 9 0;
+#X restore 982 613 pd \$0-load-from-file;
+#X obj 50 200 lzr/shade 320 70 4;
+#X obj 50 257 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 57 230 cnv 15 300 25 \$0-project-name.gui \$0-project-name.gui.set
+New-Saving 10 12 0 12 -204800 -66577 0;
+#X obj 55 205 lzr/button load 100 20 Load;
+#X obj 262 205 lzr/button save 100 20 Save As;
+#X obj 158 205 lzr/button bang 100 20 Save;
+#X connect 6 0 7 0;
+#X connect 8 0 28 0;
+#X connect 8 1 18 0;
+#X connect 9 0 10 0;
+#X connect 10 0 33 0;
+#X connect 11 0 12 0;
+#X connect 12 0 26 0;
+#X connect 13 0 8 0;
+#X connect 14 0 13 1;
+#X connect 17 0 43 0;
+#X connect 18 0 17 0;
+#X connect 19 1 6 0;
+#X connect 24 0 27 0;
+#X connect 26 0 24 0;
+#X connect 26 1 46 0;
+#X connect 26 2 47 0;
+#X connect 27 0 14 0;
+#X connect 27 1 17 1;
+#X connect 27 2 19 0;
+#X connect 28 0 29 0;
+#X connect 29 0 33 0;
+#X connect 30 0 42 0;
+#X connect 30 1 38 0;
+#X connect 33 0 11 0;
+#X connect 35 0 34 0;
+#X connect 36 0 30 0;
+#X connect 36 0 44 0;
+#X connect 42 0 12 0;
+#X connect 43 0 9 0;
 #X connect 44 0 45 0;
-#X connect 45 0 49 0;
-#X connect 46 0 82 0;
-#X connect 46 1 75 0;
-#X connect 49 0 23 0;
-#X connect 50 0 32 0;
-#X connect 51 0 33 0;
-#X connect 52 0 54 0;
-#X connect 54 0 53 0;
-#X connect 55 0 25 0;
-#X connect 56 0 81 0;
-#X connect 57 0 71 0;
-#X connect 58 0 8 0;
-#X connect 59 0 57 0;
-#X connect 62 0 71 0;
-#X connect 63 0 64 0;
-#X connect 64 0 57 0;
-#X connect 65 0 50 0;
-#X connect 65 1 7 0;
-#X connect 65 2 56 0;
-#X connect 65 3 6 0;
-#X connect 65 4 5 0;
-#X connect 65 5 62 0;
-#X connect 65 6 66 0;
-#X connect 66 0 67 0;
-#X connect 67 0 68 0;
-#X connect 68 0 63 1;
-#X connect 68 0 79 1;
-#X connect 69 0 46 0;
-#X connect 69 0 78 0;
-#X connect 75 0 71 0;
-#X connect 76 0 9 0;
-#X connect 76 1 51 0;
-#X connect 77 0 80 0;
-#X connect 77 1 57 0;
-#X connect 78 0 63 0;
-#X connect 78 1 79 0;
-#X connect 79 0 64 0;
-#X connect 80 0 11 0;
-#X connect 81 0 4 0;
-#X connect 82 0 24 0;
-#X connect 83 0 21 0;
-#X coords 0 -1 1 1 80 80 2 10 10;
-#X restore 1311 1093 pd persist-presets;
+#X connect 45 0 46 1;
+#X connect 46 0 38 0;
+#X connect 47 0 38 0;
+#X connect 49 0 35 0;
+#X connect 51 0 26 0;
+#X connect 52 0 26 0;
+#X connect 53 0 13 0;
+#X coords 0 -1 1 1 320 70 2 50 200;
+#X restore 1076 1105 pd persist-presets;
 #N canvas 27 223 574 666 mixer-master 0;
 #X obj 105 434 dac~;
 #X obj 269 129 route 0;
@@ -708,16 +602,18 @@ track-name track1_2 \, clip-params 1 3 track-name track1_3 \, clip-params
 #X text 41 138 - main-window-redraw;
 #X text 41 154 - save-parameters;
 #X restore 91 215 pd \$0-messages;
-#N canvas 483 227 359 206 \$0-debugger 0;
-#X obj 107 155 print \$0-global-event;
-#X obj 107 97 spigot;
-#X obj 146 62 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
-1;
-#X obj 107 17 inlet;
+#N canvas 483 227 519 353 \$0-debugger 0;
+#X obj 67 245 print \$0-global-event;
+#X obj 67 177 spigot;
+#X obj 106 107 tgl 15 0 \$0-debugger-toggle \$0-debugger-toggle.set
+empty 17 7 0 10 -262144 -1 -1 0 1;
+#X obj 67 67 inlet;
+#X text 124 107 Debug events;
 #X connect 1 0 0 0;
 #X connect 2 0 1 1;
 #X connect 3 0 1 0;
-#X restore 91 172 pd \$0-debugger;
+#X coords 0 -1 1 1 120 30 2 100 100;
+#X restore 1276 305 pd \$0-debugger;
 #N canvas 187 22 1375 792 \$0-bpm 0;
 #X obj 695 258 metro;
 #X obj 727 203 /;
@@ -1048,9 +944,9 @@ empty 0 -8 0 10 -262144 -1 -1 0;
 #X obj 1291 692 lzr/button delete-track-effects 100 20 Delete effects
 ;
 #X obj 1291 715 lzr/button show-panel-guts 100 20 Show panel guts;
-#X msg 1214 252 map 0 \, map 1;
-#X obj 1214 229 route redraw-main-window;
-#X obj 1214 275 iemguts/sendcanvas 1;
+#X msg 1220 244 map 0 \, map 1;
+#X obj 1220 221 route redraw-main-window;
+#X obj 1220 267 iemguts/sendcanvas 1;
 #N canvas 212 39 1385 847 \$0-input 0;
 #X obj 12 7 adc~ 1;
 #X obj 90 9 adc~ 2;
@@ -1210,7 +1106,7 @@ empty 0 -8 0 10 -262144 -1 -1 0;
 #X connect 26 0 27 0;
 #X connect 27 0 30 0;
 #X connect 28 0 22 0;
-#X restore 670 127 pd \$0-input -----------------------------------------------
+#X restore 717 127 pd \$0-input -----------------------------------------------
 ;
 #X obj 1222 396 lzr/session-midi-track \$0 8;
 #X obj 6 395 lzr/session-track \$0 1;
@@ -1221,8 +1117,6 @@ empty 0 -8 0 10 -262144 -1 -1 0;
 #X obj 876 395 lzr/session-track \$0 6;
 #X obj 47 98 declare -path .;
 #X obj 954 1028 t b a;
-#X msg 1083 1132 redraw-main-window;
-#X obj 1083 1106 delay 20;
 #X obj 1064 706 lzr/pp add-effect;
 #X connect 0 0 2 0;
 #X connect 0 1 2 1;
@@ -1283,11 +1177,11 @@ empty 0 -8 0 10 -262144 -1 -1 0;
 #X connect 21 0 37 3;
 #X connect 21 0 38 3;
 #X connect 21 0 39 3;
-#X connect 22 0 44 0;
-#X connect 23 0 44 0;
-#X connect 24 0 44 0;
-#X connect 25 0 44 0;
-#X connect 26 0 44 0;
+#X connect 22 0 42 0;
+#X connect 23 0 42 0;
+#X connect 24 0 42 0;
+#X connect 25 0 42 0;
+#X connect 26 0 42 0;
 #X connect 27 0 9 0;
 #X connect 28 0 9 0;
 #X connect 29 0 31 0;
@@ -1338,11 +1232,8 @@ empty 0 -8 0 10 -262144 -1 -1 0;
 #X connect 39 1 19 16;
 #X connect 39 2 19 17;
 #X connect 39 3 9 0;
-#X connect 41 0 43 0;
 #X connect 41 1 9 0;
-#X connect 42 0 9 0;
-#X connect 43 0 42 0;
-#X connect 44 0 41 0;
+#X connect 42 0 41 0;
 #X coords 0 -1 1 1 1400 880 2 0 300;
 #X restore 2 2 pd \$0-implementation;
 #X coords 0 0 1 1 500 500 0;
