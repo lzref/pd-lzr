@@ -1,40 +1,40 @@
-#N struct 9302-template float w float h float w2 float h2 float border-color
+#N struct 3255-template float w float h float w2 float h2 float border-color
 float background-color float behind-color float shadow-color float
 levitation float text-color symbol label float boxpos float symbolpos
 ;
-#N struct 9306-template float w float h float w2 float h2 float border-color
+#N struct 3259-template float w float h float w2 float h2 float border-color
 float background-color float behind-color float shadow-color float
 levitation float text-color symbol label float boxpos float symbolpos
 ;
-#N struct 9310-template float w float h float w2 float h2 float border-color
+#N struct 3263-template float w float h float w2 float h2 float border-color
 float background-color float behind-color float shadow-color float
 levitation float text-color symbol label float boxpos float symbolpos
 ;
-#N struct 8525-template float w float h float w2 float h2 float border-color
+#N struct 3843-template float w float h float w2 float h2 float border-color
 float background-color float behind-color float shadow-color float
 levitation float text-color symbol label float boxpos float symbolpos
 ;
-#N struct 8529-template float w float h float w2 float h2 float border-color
+#N struct 3847-template float w float h float w2 float h2 float border-color
 float background-color float behind-color float shadow-color float
 levitation float text-color symbol label float boxpos float symbolpos
 ;
-#N struct 8533-template float w float h float w2 float h2 float border-color
+#N struct 3851-template float w float h float w2 float h2 float border-color
 float background-color float behind-color float shadow-color float
 levitation float text-color symbol label float boxpos float symbolpos
 ;
-#N struct 8537-template float w float h float w2 float h2 float border-color
+#N struct 3855-template float w float h float w2 float h2 float border-color
 float background-color float behind-color float shadow-color float
 levitation float text-color symbol label float boxpos float symbolpos
 ;
-#N struct 8541-template float w float h float w2 float h2 float border-color
+#N struct 3859-template float w float h float w2 float h2 float border-color
 float background-color float behind-color float shadow-color float
 levitation float text-color symbol label float boxpos float symbolpos
 ;
-#N struct 8545-template float w float h float w2 float h2 float border-color
+#N struct 3863-template float w float h float w2 float h2 float border-color
 float background-color float behind-color float shadow-color float
 levitation float text-color symbol label float boxpos float symbolpos
 ;
-#N struct 8549-template float w float h float w2 float h2 float border-color
+#N struct 3867-template float w float h float w2 float h2 float border-color
 float background-color float behind-color float shadow-color float
 levitation float text-color symbol label float boxpos float symbolpos
 ;
@@ -480,8 +480,8 @@ levitation float text-color symbol label float boxpos float symbolpos
 #X obj 50 200 lzr/shade 320 70 4;
 #X obj 50 257 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X obj 57 230 cnv 15 300 25 \$0-project-name.gui \$0-project-name.gui.set
-New-Saving 10 12 0 12 -204800 -66577 0;
+#X obj 58 230 cnv 15 300 25 \$0-project-name.gui \$0-project-name.gui.set
+New-Saving 10 12 0 12 -228856 -66577 0;
 #X obj 55 205 lzr/button load 100 20 Load;
 #X obj 262 205 lzr/button save 100 20 Save As;
 #X obj 158 205 lzr/button bang 100 20 Save;
@@ -588,7 +588,7 @@ New-Saving 10 12 0 12 -204800 -66577 0;
 #X text 33 315 jmmmp/lbang;
 #X text 37 336 jmmmp/metrum;
 #X text 39 356 qlist;
-#X restore 91 193 pd \$0-cool-stuff;
+#X restore 9 140 pd \$0-cool-stuff;
 #N canvas 443 166 853 545 \$0-messages 0;
 #X text 30 29 \$0-global-events:;
 #X text 41 47 - play;
@@ -601,7 +601,7 @@ New-Saving 10 12 0 12 -204800 -66577 0;
 #X text 88 222 in order to check if window size changed;
 #X text 41 138 - main-window-redraw;
 #X text 41 154 - save-parameters;
-#X restore 91 215 pd \$0-messages;
+#X restore 9 162 pd \$0-messages;
 #N canvas 483 227 519 353 \$0-debugger 0;
 #X obj 67 245 print \$0-global-event;
 #X obj 67 177 spigot;
@@ -717,7 +717,7 @@ empty 17 7 0 10 -262144 -1 -1 0 1;
 #X obj 233 593 f;
 #X obj 52 594 f;
 #X obj 159 592 f;
-#X obj 279 524 t b b b;
+#X obj 279 460 t b b b;
 #X msg 233 624 timesig \$1;
 #X msg 159 623 bpm \$1;
 #X obj 159 665 lzr/pp persister param metronome;
@@ -732,7 +732,7 @@ f 2;
 -261681 -262144 0;
 #X obj 106 331 hsl 80 15 0.01 1 1 0 \$0-metro-volume.gui \$0-metro-volume.gui.set
 volume 3 8 1 10 -245500 -13381 -1 400 0;
-#X obj 222 467 t f f;
+#X obj 219 445 t f f;
 #X obj 478 342 t a;
 #X text 342 36 from global event bus;
 #X obj 109 476 t f f;
@@ -777,6 +777,7 @@ volume 3 8 1 10 -245500 -13381 -1 400 0;
 #X connect 31 0 50 0;
 #X connect 33 0 53 0;
 #X connect 34 0 37 1;
+#X connect 34 0 21 2;
 #X connect 35 0 49 0;
 #X connect 36 0 40 0;
 #X connect 37 0 45 0;
@@ -892,7 +893,7 @@ volume 3 8 1 10 -245500 -13381 -1 400 0;
 #X connect 39 0 40 0;
 #X connect 40 0 38 0;
 #X connect 42 0 41 0;
-#X restore 91 236 pd \$0-settings;
+#X restore 9 183 pd \$0-settings;
 #N canvas 517 155 702 482 \$0-track-selector 0;
 #X obj 209 249 + 1;
 #X msg 209 308 set-current-track \$1 \, redraw-main-window;
@@ -1115,7 +1116,7 @@ empty 0 -8 0 10 -262144 -1 -1 0;
 #X obj 528 395 lzr/session-track \$0 4;
 #X obj 702 395 lzr/session-track \$0 5;
 #X obj 876 395 lzr/session-track \$0 6;
-#X obj 47 98 declare -path .;
+#X obj 9 101 declare -path .;
 #X obj 954 1028 t b a;
 #X obj 1064 706 lzr/pp add-effect;
 #X connect 0 0 2 0;
@@ -1137,6 +1138,8 @@ empty 0 -8 0 10 -262144 -1 -1 0;
 #X connect 0 16 9 0;
 #X connect 1 0 9 0;
 #X connect 2 0 9 0;
+#X connect 6 0 2 0;
+#X connect 6 1 2 1;
 #X connect 6 2 9 0;
 #X connect 8 0 9 0;
 #X connect 18 0 9 0;
