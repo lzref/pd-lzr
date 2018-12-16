@@ -2,6 +2,6 @@
 
 Connect audio and MIDI devices, add various effects an instruments, record audio and midi clips. save and load projects (all clips, effects, as well as positions of all knobs and faders will be persisted). Want to know how it works? Just look inside of each component!
 
-[https://github.com/lazarchik/pd-lzr/](https://github.com/lazarchik/pd-lzr/)
+[https://github.com/lzref/pd-lzr/](https://github.com/pd-lzr/pd-lzr/)
 
 [![pd-lzr screenshot](http://i.imgur.com/4VIBNWXh.png)](http://i.imgur.com/4VIBNWX.png)
